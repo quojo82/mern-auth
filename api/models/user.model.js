@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
        
     }
     
-},{timestamp:true}) //timestamp for a user time of creation and edit
+},{timestamps:true}) //timestamp for a user time of creation and edit
 
 const User = mongoose.model('User',userSchema)
 export default User;
