@@ -7,7 +7,7 @@ const Header = () => {
     <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
        <Link to='/'> <h1 className='font-bold'>Auth App</h1></Link>
         <ul className='flex gap-4'>
-            <Link to ='home'><li>Home</li></Link>
+            <Link to ='/'><li>Home</li></Link>
             <Link to='/about'> <li>About</li></Link>
             <Link to='/signin'><li>Sign In</li></Link>
         
