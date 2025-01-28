@@ -80,6 +80,7 @@ const SignUp = () => {
         >
           {loading ? "Loading..." : "Sign Up"}
         </button>
+      
       </form>
 
       <div className="flex gap-2 mt-3">
