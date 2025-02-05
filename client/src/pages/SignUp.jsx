@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import OAuth from "../component/OAuth";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
@@ -80,6 +81,7 @@ const SignUp = () => {
         >
           {loading ? "Loading..." : "Sign Up"}
         </button>
+        <OAuth/>
       
       </form>
 
