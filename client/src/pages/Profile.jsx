@@ -10,6 +10,7 @@ import {
   deleteUserStart,
   deleteUserSuccess,
   deleteUserFailure,
+  signOut
 } from "../users/userSlice";
 
 const Profile = () => {
@@ -71,7 +72,16 @@ const Profile = () => {
       }
     };
   
-  
+    //signout
+
+    const handleSignOut=async()=>{
+      try{
+        await fetch('api/auth/signout')
+        dispatch(signOut())
+      }catch(error){
+          console.log(error);
+      }
+    }
   //console.log(formData); {}
   return (
     <div className="p-3 max-w-lg mx-auto">
@@ -127,8 +137,8 @@ const Profile = () => {
           {" "}
           Delete Account
         </span>
-        <span className="text-red-700 cursor-pointer ">
-          <Link to="/signup"> Sign-Up</Link>
+        <span onClick={handleSignOut}className="text-red-700 cursor-pointer ">
+          <Link to="/signup"> Sign-Out</Link>
         </span>
       </div>
       <p className="text-red-700 mt-5">{error && "Something went wrong"}</p>
